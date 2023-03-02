@@ -1,0 +1,262 @@
+.block {
+    width: 100px;
+    height: 100px;
+}
+
+.beam {
+    margin-top: 300px;
+    background-color: red;
+}
+
+/* Exercise ev_1_1_transition */
+
+.block-container:hover .beam {
+    animation-name: beam;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes beam {
+    0% {
+        width: 100px;
+    }
+    25% {
+        width: 250px;
+    }
+    50% {
+        width: 500px;
+    }
+    75% {
+        width: 250px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+.race-container {
+    position: relative;
+}
+
+.race1 {
+    background-color: green;
+    position: absolute;
+    top: 405px;
+}
+
+.race2 {
+    background-color: blue;
+    position: absolute;
+    top: 510px
+}
+
+/* Exercise lev_1_2_transition */
+
+.block-container:hover .race1 {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.block-container:hover .race2 {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    25% {
+        left: 250px;
+    }
+    50% {
+        left: 500px;
+    }
+    75% {
+        left: 250px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.rock {
+    background-color: brown;
+    position: absolute;
+    top: 615px;
+    left: 110px;
+}
+
+/* Exercise lev_1_1_transform */
+
+.block-container:hover .rock {
+    animation-name: downfall;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes downfall {
+    0% {
+        transform: rotate(0) scale(1);
+        transform-origin: left;
+    }
+    25% {
+        transform: rotate(45deg) scale(1.5);
+        transform-origin: left;
+        border-radius: 25%;
+        background-color: yellow;
+    }
+    50% {
+        transform: rotate(90deg) scale(2);
+        transform-origin: left;
+        border-radius: 50%;
+        background-color: blueviolet;
+    }
+    75% {
+        transform: rotate(45deg) scale(1.5);
+        transform-origin: left;
+        border-radius: 25%;
+        background-color: yellow;
+    }
+    100% {
+        transform: rotate(0) scale(1);
+        transform-origin: left;
+    }
+}
+
+/* Exercise lev_1_2_transform */
+
+.grid-container {
+    position: absolute;
+    top: 720px;
+    left: 270px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 110px;
+}
+
+.transform {
+    background-color:blueviolet;
+}
+
+.block-container:hover .translate {
+    animation-name: translate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes translate {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(50px) translateY(50px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.block-container:hover .translateX {
+    animation-name: translateX;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes translateX {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.block-container:hover .translateY {
+    animation-name: translateY;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes translateY {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.block-container:hover .rotate {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.block-container:hover .scale {
+    animation-name: scale;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.block-container:hover .skew {
+    animation-name: skew;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0);
+    }
+    50% {
+        transform: skew(30deg);
+    }
+    100% {
+        transform: skew(0);
+    }
+}
